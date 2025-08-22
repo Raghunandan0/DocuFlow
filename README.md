@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# ✍️ DocuFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DocuFlow** is a **real-time collaborative document editor** built with **React**, **React-Quill**, and **Firebase**. It allows multiple users to **edit, comment, and collaborate simultaneously** while keeping documents synced in real-time. This project showcases expertise in **full-stack development**, **real-time databases**, and **modern web UI/UX**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- ✅ **User Authentication**: Sign up, login, and secure access with Firebase Auth  
+- ✅ **Real-Time Collaboration**: Multiple users can edit documents simultaneously  
+- ✅ **Rich Text Editing**: Bold, italic, underline, lists, tables, code blocks, images  
+- ✅ **Auto-Save with Throttle**: Efficiently saves changes to Firestore  
+- ✅ **Cursor Position Preservation**: Smooth multi-user editing experience  
+- ✅ **Responsive Design**: Works on desktop and mobile devices  
+- ✅ **Task Checklists & Notes**: Organize content like Google Docs  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React, React-Quill, Tailwind CSS / Custom CSS  
+- **Backend / Database**: Firebase Firestore (Realtime DB), Firebase Auth  
+- **Deployment**: Vercel / Netlify  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🖼️ Screenshots
+<img src="https://github.com/user-attachments/assets/dedbe3af-a508-47cd-a7c6-ba699f08abfd" width="700" />
+
+---
+## 💻 Usage
+
+- ✅ **Sign up or log in** using your email.  
+- ✅ **Create or open a document** to start working.  
+- ✅ **Edit documents** – changes are saved automatically in real-time.  
+- ✅ **Invite other users** to collaborate and see live updates.  
+- ✅ **Test rich content**: text formatting, tables, images, and code blocks.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/docuflow.git
+cd docuflow
 ```
+### 2. Install dependencies
+``` npm install ```
+### 3. Configure Firebase
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 1.Create a Firebase project at Firebase Console
+#### 2. Enable Authentication (Email/Password)
+#### 3. Create a Firestore database
+#### 4. Update firebase-config.js with your Firebase project credentials:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 4. Start the development server
+```npm run dev```
